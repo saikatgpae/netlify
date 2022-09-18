@@ -5,6 +5,7 @@ const loadAll = async () => {
     const anime = document.createElement('tr');
     anime.setAttribute('draggable', true);
     anime.id = `anime-${element.mal_id}`;
+    anime.className = 'anime';
     anime.innerHTML = `
         <td class="title">${element.title}</td>
         <td><img src="${element.images.jpg.small_image_url}" alt=""></td>
@@ -46,6 +47,16 @@ const loadAll = async () => {
         }
       }
     }
+  });
+  document.querySelectorAll('.anime').forEach((element) => {
+    element.addEventListener('click', () => {
+      const id = parseInt(element.id.split('-')[1], 10);
+      for (let i = 0; i < json.data.length; i += 1) {
+        if (json.data[i].mal_id === id) {
+          window.open(json.data[i].url);
+        }
+      }
+    });
   });
 };
 export default loadAll;
