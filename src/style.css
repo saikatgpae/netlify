@@ -16,7 +16,7 @@
 }
 
 .anime {
-  display: flex;
+  /* display: flex; */
 }
 
 #animes tr.header,
