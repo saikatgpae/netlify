@@ -49,7 +49,7 @@
   font-weight: 500;
 }
 
-.home {
+.home, .empty {
   align-self: end;
   cursor: pointer;
 }
