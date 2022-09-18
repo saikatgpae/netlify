@@ -1,0 +1,56 @@
+#animes {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#animes th,
+#animes td {
+  text-align: left;
+  padding: 12px;
+}
+
+#animes tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.anime {
+  display: flex;
+}
+
+#animes tr.header,
+#animes tr:hover {
+  background-color: #f1f1f1;
+}
+
+#searchInput {
+  background-image: url('./images/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#watchLater {
+  position: fixed;
+  bottom: 5%;
+  right: 10%;
+  width: 50%;
+  height: 15%;
+  background-color: rgb(3, 62, 55);
+  text-align: center;
+  border-radius: 5%;
+  color: white;
+  padding: 3%;
+  font-weight: 500;
+}
+
+.home,
+.empty {
+  align-self: end;
+  cursor: pointer;
+}
