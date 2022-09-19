@@ -3,6 +3,7 @@ import './style.css';
 import loadAll from './components/loadAll.js';
 import titleSearch from './components/titleSearch.js';
 import printWatchlist from './components/printWatchlist.js';
+import close from './images/close-logo.png';
 
 // Load all data
 loadAll();
@@ -44,7 +45,14 @@ document.addEventListener('drop', (event) => {
         idArray.push(element.animeId);
       });
       if (idArray.includes(id) === true) {
-        window.alert('You already added this anime to your watchlist');
+        const alert = document.createElement('div');
+        alert.className = 'alert';
+        alert.innerHTML = `<div><a><img src="${close}" alt="close logo" id="close-logo"></a></div><div class="alert--msg-box"><h2>Already in your watchlist</h2></div>`;
+        document.querySelector('.all-animes').appendChild(alert);
+        document.querySelector('#watchLater').style.display = 'none';
+        document.querySelector('#close-logo').addEventListener('click', () => {
+          window.location.reload();
+        });
         return false;
       }
       storedArray.push({
