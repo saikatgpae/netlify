@@ -12,7 +12,7 @@
 - Technologies used: Linters.
 
 
-[Live Demo Link]()
+[Live Demo Link](https://saikatgpae.github.io/netlify/)
 
 
 
